@@ -5,8 +5,14 @@ previouly in new.html.erb is form_for :article do |f|
 previouly in edit.html.erb is form_for :article, url: article_path(@article), method: :patch do |f|
 now is form_for @article do |f|
 
-doc says that @article is a resource, rails can determine which url to use
-if the resource match the REST routes
+doc says that @article is a resource, rails can determine which url to use if the resource match the REST routes,
+actually that means, rails will generate forms with different post urls, like:
+new action:
+<form accept-charset="UTF-8" action="/articles" class="new_article" id="new_article" method="post">
+edit action:
+<form accept-charset="UTF-8" action="/articles/5" class="edit_article" id="edit_article_5" method="post">
+according to rake routes, we will know new action will post to articles#create, while edit action will post to articles#update
+(PATCH  /articles/:id(.:format)      articles#update)
 -->
 
 <%= form_for @article do |f| %>
