@@ -1,4 +1,7 @@
 class ArticlesController < ApplicationController
+
+  http_basic_authenticate_with name: "dhh", password: "secret", except: [:index, :show]
+
   def index
     @articles = Article.all
   end
@@ -12,16 +15,11 @@ class ArticlesController < ApplicationController
 
   def create
   	#render plain: params[:article].inspect
-    #puts plain: params[:article].inspect
 
   	@article = Article.new(article_params)
 
     if @article.save
-      #no need add "and return, redirect_to will stop render create.html.erb if exists"
   	  redirect_to article_path(@article)
-      #although add "and return" here, still rendering create.html.erb if exists
-      #TODO that means "and return" no use?
-      #puts "test" and return
     else
       render 'new'
     end

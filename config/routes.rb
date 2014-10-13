@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :users
+
   #do not typo as resource
   resources :articles do
     resources :comments
