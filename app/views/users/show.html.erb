@@ -18,6 +18,9 @@
   <%= @user.email %>
 </p>
 
+<h2>User's articles</h2>
+<%= render @user.articles %>
+
 <h2>Add an article</h2>
 <%= render "articles/form" %>
 

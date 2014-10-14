@@ -18,11 +18,11 @@ class ArticlesController < ApplicationController
   def create
   	#render plain: params[:article].inspect
 
-    @user = User.find(params[:id])
+    @user = User.find(params[:user_id])
   	@article = @user.articles.new(article_params)
 
     if @article.save
-  	  redirect_to user_article_path(@article)
+  	  redirect_to user_article_path(@user, @article)
     else
       render 'new'
     end
@@ -36,13 +36,13 @@ class ArticlesController < ApplicationController
   end
 
   def edit
-    #param contains all the :article, only get :id from the hashmap
-    @article = Article.find(params[:id])
+    @user = User.find(params[:user_id])
+    @article = @user.articles.find(params[:id])
   end
 
   def update
-    #param contains all the :article, see edit.html.erb, form_for :article, url: article_path(@article)
-    @article = Article.find(params[:id])
+    @user = User.find(params[:user_id])
+    @article = @user.articles.find(params[:id])
 
     if @article.update(article_params)
       redirect_to @article
