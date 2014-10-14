@@ -18,10 +18,11 @@ class ArticlesController < ApplicationController
   def create
   	#render plain: params[:article].inspect
 
-  	@article = Article.new(article_params)
+    @user = User.find(params[:id])
+  	@article = @user.articles.new(article_params)
 
     if @article.save
-  	  redirect_to article_path(@article)
+  	  redirect_to user_article_path(@article)
     else
       render 'new'
     end
