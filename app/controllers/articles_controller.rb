@@ -3,14 +3,16 @@ class ArticlesController < ApplicationController
   http_basic_authenticate_with name: "dhh", password: "secret", except: [:index, :show]
 
   def index
-    @articles = Article.all
+    @user = User.find(params[:user_id])
+    @articles = @user.articles
   end
 
   def new
     #must new a article here, otherwise new.html.erb @article will be nil when call new_article_path
     #(create action fails and redirect to new action will be safe, since @article passed from create will always not be nil)
     #nil can not call @article.errors.any? (_form.html.erb)
-    @article = Article.new
+    @user = User.find(params[:user_id])
+    @article = @user.articles.new
   end
 
   def create
@@ -28,7 +30,8 @@ class ArticlesController < ApplicationController
 
   def show
     #param contains all the :article, only get :id from the hashmap
-  	@article = Article.find(params[:id])
+    @user = User.find(params[:user_id])
+  	@article = @user.articles.find(params[:id])
   end
 
   def edit

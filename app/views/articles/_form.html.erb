@@ -17,7 +17,7 @@ according to rake routes, we will know new action will post to articles#create, 
 
 <%= form_for [@user, @user.articles.build] do |f| %>
 
-    <% if @article.errors.any? %>
+    <% if @article.present? && @article.errors.any? %>
         <div id="error_explanation">
             <h2>
               <%= pluralize(@article.errors.count, "error") %> prohibited this article from being saved:
