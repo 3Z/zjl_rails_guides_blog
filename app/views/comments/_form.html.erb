@@ -1,5 +1,6 @@
 <!-- notice [] wrapper, nest routes -->
-<%= form_for([@user, @article, @article.comments.build]) do |f| %>
+<% @comment ||= @article.comments.build %>
+<%= form_for([@user, @article, @comment]) do |f| %>
 <%#= form_for @article, url: new_user_article_comment_path do |f| %>
     <p>
       <!-- TODO the naming rules -->

@@ -17,7 +17,7 @@ class CommentsController < ApplicationController
 
   def update
     @user = User.find(params[:user_id])
-    @article = @user.articles.find([:article_id])
+    @article = @user.articles.find(params[:article_id])
     @comment = @article.comments.find(params[:id])
     @comment.update(comment_params)
     redirect_to user_article_path(@user, @article)

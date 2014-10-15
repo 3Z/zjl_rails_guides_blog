@@ -15,7 +15,9 @@ according to rake routes, we will know new action will post to articles#create, 
 (PATCH  /articles/:id(.:format)      articles#update)
 -->
 
-<%= form_for [@user, @user.articles.build] do |f| %>
+<% @article ||= @user.articles.build %>
+
+<%= form_for [@user, @article] do |f| %>
 
     <% if @article.present? && @article.errors.any? %>
         <div id="error_explanation">
