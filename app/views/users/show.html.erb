@@ -19,7 +19,13 @@
 </p>
 
 <h2>User's articles</h2>
-<%= render @user.articles %>
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Text</th>
+  </tr>
+    <%= render @user.articles %>
+</table>
 
 <h2>Add an article</h2>
 <%= render "articles/form" %>

@@ -1,16 +1,22 @@
 
-<p>
-  <strong>Commenter:</strong>
-  <%= comment.commenter %>
-</p>
+<tr>
+    <td>
+      <%= comment.commenter %>
+    </td>
 
-<p>
-  <strong>Comment:</strong>
-  <%= comment.body %>
-</p>
+    <td>
 
-<p>
-  <%= link_to 'Delete Comment', user_article_comment_path(@user, @article, comment),
-              method: :delete,
-              data: { confirm: 'Are you sure?'} %>
-</p>
+      <%= comment.body %>
+    </td>
+
+  <td>
+    <%= link_to 'Edit', edit_user_article_comment_path(@user, @article, comment) %>
+  </td>
+
+    <td>
+      <%= link_to 'Destroy', user_article_comment_path(@user, @article, comment),
+                  method: :delete,
+                  data: { confirm: 'Are you sure?'} %>
+    </td>
+</tr>
+

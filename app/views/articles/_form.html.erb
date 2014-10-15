@@ -1,8 +1,8 @@
 
 <!--
 notice that:
-previouly in new.html.erb is form_for :article do |f|
-previouly in edit.html.erb is form_for :article, url: article_path(@article), method: :patch do |f|
+previously in new.html.erb is form_for :article do |f|
+previously in edit.html.erb is form_for :article, url: article_path(@article), method: :patch do |f|
 now is form_for @article do |f|
 
 doc says that @article is a resource, rails can determine which url to use if the resource match the REST routes,
