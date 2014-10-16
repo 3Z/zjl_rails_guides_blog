@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
 
   resources :users do
-    #do not typo as resource
-    resources :articles do
-      resources :comments
-    end
+  end
+
+  resources :articles do
+    resources :comments
   end
 
   # The priority is based upon order of creation: first created -> highest priority.

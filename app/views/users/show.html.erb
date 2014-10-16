@@ -18,6 +18,11 @@
   <%= @user.email %>
 </p>
 
+<!--<br><br><br><br>-->
+<!--TODO how redirect to user_path after created article?-->
+<!--<h2>Add an article</h2>-->
+<!--<%#= render "articles/form" %>-->
+
 <h2>User's articles</h2>
 <table>
   <tr>
@@ -27,6 +32,8 @@
     <%= render @user.articles %>
 </table>
 
+<br><br><br><br>
+TODO how redirect to user_path after created article?
 <h2>Add an article</h2>
 <%= render "articles/form" %>
 

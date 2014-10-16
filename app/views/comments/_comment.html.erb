@@ -9,14 +9,15 @@
       <%= comment.body %>
     </td>
 
-  <td>
-    <%= link_to 'Edit', edit_user_article_comment_path(@user, @article, comment) %>
-  </td>
+    <td>
+        <%= link_to 'Edit', edit_article_comment_path(@article, comment) %>
+    </td>
 
     <td>
-      <%= link_to 'Destroy', user_article_comment_path(@user, @article, comment),
-                  method: :delete,
+      <%= link_to 'Destroy', article_comment_path(@article, comment),
+                   method: :delete,
                   data: { confirm: 'Are you sure?'} %>
     </td>
+
 </tr>
 

@@ -3,26 +3,20 @@ class ArticlesController < ApplicationController
   http_basic_authenticate_with name: "dhh", password: "secret", except: [:index, :show]
 
   def index
-    @user = User.find(params[:user_id])
-    @articles = @user.articles
+    @articles = Article.all
   end
 
   def new
-    #must new a article here, otherwise new.html.erb @article will be nil when call new_article_path
-    #(create action fails and redirect to new action will be safe, since @article passed from create will always not be nil)
-    #nil can not call @article.errors.any? (_form.html.erb)
-    @user = User.find(params[:user_id])
-    @article = @user.articles.new
+    @article = Article.new
   end
 
   def create
-  	#render plain: params[:article].inspect
+  	#puts "---------", plain: params[:article].inspect
 
-    @user = User.find(params[:user_id])
-  	@article = @user.articles.new(article_params)
+  	@article = Article.new(article_params)
 
     if @article.save
-  	  redirect_to user_path(@user)
+  	  redirect_to article_path(@article)
     else
       render 'new'
     end
@@ -30,22 +24,18 @@ class ArticlesController < ApplicationController
   end
 
   def show
-    #param contains all the :article, only get :id from the hashmap
-    @user = User.find(params[:user_id])
-  	@article = @user.articles.find(params[:id])
+  	@article = Article.find(params[:id])
   end
 
   def edit
-    @user = User.find(params[:user_id])
-    @article = @user.articles.find(params[:id])
+    @article = Article.find(params[:id])
   end
 
   def update
-    @user = User.find(params[:user_id])
-    @article = @user.articles.find(params[:id])
+    @article = Article.find(params[:id])
 
     if @article.update(article_params)
-      redirect_to user_path(@user)
+      redirect_to article_path(@article)
     else
       render 'edit'
     end

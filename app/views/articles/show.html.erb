@@ -8,6 +8,7 @@
 	<%= @article.text %>
 </p>
 
+<%= link_to 'Edit Article ', edit_article_path(@article) %>
 
 <h2>Comments</h2>
 <table>
@@ -20,6 +21,4 @@
 
 <h2>Add a comment</h2>
 <%= render "comments/form" %>
-
-<%= link_to 'Back', user_path(@user) %>
-| <%= link_to 'Edit', edit_user_article_path(@user, @article) %>
+<!--<%#= link_to 'Back', user_path(@user) %>-->
