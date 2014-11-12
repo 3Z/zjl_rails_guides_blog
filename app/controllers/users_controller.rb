@@ -1,7 +1,13 @@
 class UsersController < ApplicationController
 
+  has_scope :by_gender
+  #, :type => :integer
+  # has_scope :age
+
   def index
-    @users = User.all
+    # @users = User.all
+    # @users = User.where(gender: params[:gender]).where("age < ?", params[:age])
+    @users = apply_scopes(User).all
   end
 
   def new
