@@ -1,8 +1,7 @@
 class UsersController < ApplicationController
 
-  has_scope :by_gender
-  #, :type => :integer
-  # has_scope :age
+  has_scope :by_gender, :type => :default
+  has_scope :age, :type => :default
 
   def index
     # @users = User.all
