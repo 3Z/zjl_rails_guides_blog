@@ -1,6 +1,6 @@
 class UsersController < ApplicationController
 
-  has_scope :by_gender, :type => :default
+  has_scope :gender, :type => :default
   has_scope :age, :type => :default
 
   def index
