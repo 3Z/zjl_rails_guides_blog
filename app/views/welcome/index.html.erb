@@ -1,2 +1,16 @@
-<h1>Hello, Rails!</h1>
+Welcome#index
+<br>
+
+<% if current_user != nil && user_signed_in? %>
+    <%= link_to "Sign out", destroy_user_session_path, :method => 'delete' %>
+
+    <br>
+    <br>
+    Email: <%= current_user.email %>
+    <br>
+    Id: <%= current_user.id %>
+
+<% else %>
+    <%= link_to "Sign in", new_user_session_path %>
+<% end %>
 
