@@ -7,4 +7,9 @@ class User < ActiveRecord::Base
   # scope :by_gender, -> gender { where("gender = ?", gender) }
   scope :haha_age, -> age { where("age < ?", age) }
 
+  # Include default devise modules. Others available are:
+  # :confirmable, :lockable, :timeoutable and :omniauthable
+  devise :database_authenticatable, :registerable,
+         :recoverable, :rememberable, :trackable, :validatable, :confirmable
+
 end

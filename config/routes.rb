@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
 
-  resources :users do
-  end
+  get 'welcome/index'
+
+  # devise_for :users
+
+  # resources :users do
+  # end
 
   resources :articles do
     resources :comments
@@ -13,7 +17,7 @@ Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
   root 'welcome#index'
 
-  get 'welcome/index'
+  devise_for :users
 
   #get 'articles/:id' => 'articles#show'
 
