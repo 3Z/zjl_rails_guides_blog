@@ -1,5 +1,6 @@
-class Frontend::HomeController < ApplicationController
+
+class Frontend::HomeController < FrontendController
   def index
-    @users = apply_scopes(User).all
+    @users = User.all
   end
 end
