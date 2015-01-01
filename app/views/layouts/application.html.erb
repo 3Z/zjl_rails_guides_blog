@@ -10,9 +10,9 @@
 
 <% flash.each do |key,value| %>
     <div class="alert alert-<%= key %>">
-      <button type="button" class="close" data-dismiss="alert">×</button>
       <%= value %>
     </div>
+    <br>
 <% end %>
 
 <%= yield %>
