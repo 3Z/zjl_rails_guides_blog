@@ -15,6 +15,14 @@
       <%= f.radio_button :gender, '0' %> Female
     </div>
 
+
+    <div class="field">
+        <%= f.label :avatar%>
+        <div>
+          <%= f.file_field :avatar %>
+        </div>
+    </div>
+
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
     <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
   <% end %>

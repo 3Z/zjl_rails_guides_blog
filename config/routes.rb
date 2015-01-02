@@ -6,6 +6,8 @@ Rails.application.routes.draw do
 
   devise_for :users
 
+  # devise_for :users, path: 'user', controllers: {registrations: 'users/registrations'}
+
   namespace :admin, path: '/admin' do
     root 'home#index'
 
