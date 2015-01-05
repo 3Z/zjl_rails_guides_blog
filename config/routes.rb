@@ -4,7 +4,9 @@ Rails.application.routes.draw do
     resources :comments
   end
 
-  devise_for :users
+  # devise_for :users
+
+  resources :users , only: [:index, :show]
 
   # devise_for :users, path: 'user', controllers: {registrations: 'users/registrations'}
 
