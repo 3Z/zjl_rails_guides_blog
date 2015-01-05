@@ -3,3 +3,14 @@
   <li>Name: <%= @user.name %></li>
   <li>Email:<%= @user.email %></li>
 </ul>
+
+
+<br>
+<br>
+
+<ul>
+  <% @articles != nil && @articles.each do |article| %>
+      <li><%= article.title%></li>
+      <li><%= article.text%></li>
+  <% end %>
+</ul>

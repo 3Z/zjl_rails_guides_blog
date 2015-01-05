@@ -1,4 +1,14 @@
-Profile:
+111 Profile:
 <br>
 <br>
 <%= @user.email %>
+
+<br>
+<br>
+
+<ul>
+  <% @articles.each do |article| %>
+      <li><%= article.title%></li>
+      <li><%= article.text%></li>
+  <% end %>
+</ul>
