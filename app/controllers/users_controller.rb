@@ -14,12 +14,6 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @articles = @user.articles
 
-    puts "--------"
-    puts @articles
-    @articles.each do |article|
-      puts article.title
-    end
-
   end
 
 end

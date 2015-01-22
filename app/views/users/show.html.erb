@@ -10,7 +10,10 @@
 
 <ul>
   <% @articles != nil && @articles.each do |article| %>
-      <li><%= article.title%></li>
+      <li><%= link_to article.title, user_article_path(article) %></li>
       <li><%= article.text%></li>
   <% end %>
 </ul>
+
+<h2>Add an article</h2>
+<%= render "articles/form" %>

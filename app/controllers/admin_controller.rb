@@ -3,7 +3,7 @@ class AdminController < FrontendController
   # include ApplicationHelper
   # include AdminHelper
 
-  layout 'admin/home'
+  # layout 'admin/home'
   before_filter :authenticate_user! #, :load_categories
 
   def title

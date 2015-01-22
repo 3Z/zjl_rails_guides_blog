@@ -1,12 +1,16 @@
 Rails.application.routes.draw do
 
-  resources :articles do
-    resources :comments
-  end
+  # resources :articles do
+  #   resources :comments
+  # end
 
   devise_for :users
 
-  resources :users , only: [:index, :show]
+  resources :users , only: [:index, :show] do
+    resources :articles do
+      resources :comments
+    end
+  end
 
   # devise_for :users, path: 'user', controllers: {registrations: 'users/registrations'}
 
