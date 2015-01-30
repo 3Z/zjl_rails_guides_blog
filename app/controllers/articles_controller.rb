@@ -11,12 +11,17 @@ class ArticlesController < ApplicationController
   end
 
   def create
-  	#puts "---------", plain: params[:article].inspect
+  	# puts "---------", plain: params[:article].inspect
 
   	@article = Article.new(article_params)
+    @article.user_id = params[:user_id]
+
+    @user = User.find(@article.user_id)
+
+    puts "---------", plain: @article.inspect
 
     if @article.save
-  	  redirect_to article_path(@article)
+  	  redirect_to user_path(@user)
     else
       render 'new'
     end

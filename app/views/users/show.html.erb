@@ -10,8 +10,8 @@
 
 <ul>
   <% @articles != nil && @articles.each do |article| %>
-      <li><%= link_to article.title, user_article_path(article) %></li>
-      <li><%= article.text%></li>
+      <li><%= link_to article.title, article_path(article) %></li>
+      <!--<li><%= article.text%></li>-->
   <% end %>
 </ul>
 

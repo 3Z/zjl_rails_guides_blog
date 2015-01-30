@@ -17,7 +17,7 @@ according to rake routes, we will know new action will post to articles#create, 
 
 <% @article ||= @user.articles.build %>
 
-<%= form_for @article do |f| %>
+<%= form_for ([@user, @article]) do |f| %>
 
     <% if @article.present? && @article.errors.any? %>
         <div id="error_explanation">
