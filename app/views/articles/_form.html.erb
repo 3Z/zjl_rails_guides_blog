@@ -19,19 +19,6 @@ according to rake routes, we will know new action will post to articles#create, 
 
 <%= form_for ([@user, @article]) do |f| %>
 
-    <% if @article.present? && @article.errors.any? %>
-        <div id="error_explanation">
-            <h2>
-              <%= pluralize(@article.errors.count, "error") %> prohibited this article from being saved:
-            </h2>
-            <ul>
-              <% @article.errors.full_messages.each do |msg| %>
-                <li><%= msg %></li>
-              <% end %>
-            </ul>
-        </div>
-    <% end %>
-
 	<p>
 		<%= f.label :title %> <br>
 		<%= f.text_field :title %>

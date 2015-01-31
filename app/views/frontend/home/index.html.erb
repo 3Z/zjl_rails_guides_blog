@@ -1,8 +1,6 @@
 <% if user_signed_in? %>
 
-    Welcome <%= current_user.email %> !
-
-    <%= link_to "Sign out", destroy_user_session_path, :method => 'delete' %>
+    Welcome <%= link_to "#{current_user.email}", admin_root_path %> !
     <br>
 
 <% else %>
@@ -26,7 +24,7 @@
         <td><%= user.gender %></td>
         <td><%= user.age %></td>
         <td><%= user.email %></td>
-        <td><%= image_tag(user.avatar.url(:thumb)) %></td>
+        <td><%= link_to image_tag(user.avatar.url(:thumb)), user_path(user) %></td>
       </tr>
   <% end %>
 

@@ -1,1 +1,17 @@
-admin#index
+Admin Profile:
+<br>
+<br>
+<%= @user.email %>
+<%= link_to "Sign out", destroy_user_session_path, :method => 'delete' %>
+
+<br>
+<br>
+
+<h2>Articles</h2>
+<table>
+  <tr>
+    <th><strong>Title</strong></th>
+    <th><strong>Content</strong></th>
+  </tr>
+  <%= render @articles %>
+</table>

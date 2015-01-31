@@ -8,12 +8,14 @@
 <br>
 <br>
 
-<ul>
-  <% @articles != nil && @articles.each do |article| %>
-      <li><%= link_to article.title, article_path(article) %></li>
-      <!--<li><%= article.text%></li>-->
-  <% end %>
-</ul>
+<h2>Articles</h2>
+<table>
+  <tr>
+    <th><strong>Title</strong></th>
+    <th><strong>Content</strong></th>
+  </tr>
+  <%= render @articles %>
+</table>
 
 <h2>Add an article</h2>
 <%= render "articles/form" %>
