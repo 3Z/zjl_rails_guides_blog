@@ -18,7 +18,7 @@ class ArticlesController < ApplicationController
 
     @user = User.find(@article.user_id)
 
-    # puts "---------", plain: @article.inspect
+    puts "---------", plain: @article.inspect
 
     if @article.save
   	  redirect_to user_path(@user)

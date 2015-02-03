@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
   has_many :articles, dependent: :destroy
+  has_many :photos, dependent: :destroy
 
   #url like http://localhost:3000/users/?haha_age=50&by_gender=1
   #:by_gender is the param name in url, gender is the param value, :gender is the column name of this model

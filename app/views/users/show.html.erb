@@ -4,6 +4,12 @@
   <li>Email:<%= @user.email %></li>
 </ul>
 
+Photos:
+<% @photos.each do |photo| %>
+    <br>
+    <%= image_tag(photo.image.url(:thumb))%>
+    <br>
+<% end %>
 
 <br>
 <br>
@@ -19,3 +25,19 @@
 
 <h2>Add an article</h2>
 <%= render "articles/form" %>
+
+<h2>Upload photo</h2>
+
+<% @photo ||= @user.photos.build %>
+<%= form_for [@user, @photo], :html => { :multipart => true } do |f| %>
+
+    <p>
+      <%= f.label :image %> <br>
+      <%= f.file_field :image %>
+    </p>
+
+    <p>
+      <%= f.submit "Upload" %>
+    </p>
+
+<% end %>
