@@ -1,7 +1,5 @@
-
 <tr>
-    <td><%= article.title %></td>
+    <td><%= link_to article.title, admin_article_path(article) %></td>
     <td><%= article.text %></td>
-    <td><%= link_to 'Show', article_path(article) %></td>
 </tr>
 

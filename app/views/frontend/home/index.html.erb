@@ -1,11 +1,13 @@
 <% if user_signed_in? %>
-
     Welcome <%= link_to "#{current_user.email}", admin_root_path %> !
-    <br>
-
 <% else %>
     <%= link_to "Sign in", new_user_session_path %>
 <% end %>
+
+<br>
+<br>
+
+Users:
 
 <br>
 <br>

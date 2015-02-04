@@ -1,8 +1,11 @@
-Admin Profile:
-<br>
-<br>
+<h2>Admin Profile</h2>
 <%= @user.email %>
-<%= link_to "Sign out", destroy_user_session_path, :method => 'delete' %>
+<%= link_to "Sign out", destroy_user_session_path %>
+
+<br>
+<br>
+
+<%= link_to "Articles", admin_articles_path %>
 
 <br>
 <br>
@@ -13,5 +16,5 @@ Admin Profile:
     <th><strong>Title</strong></th>
     <th><strong>Content</strong></th>
   </tr>
-  <%= render @articles %>
+  <%= render @user.articles %>
 </table>

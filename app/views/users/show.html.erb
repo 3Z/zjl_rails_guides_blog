@@ -1,8 +1,9 @@
 <h1><%= @user.email %></h1>
-<ul>
-  <li>Name: <%= @user.name %></li>
-  <li>Email:<%= @user.email %></li>
-</ul>
+
+<%= link_to "Update Profile", edit_user_registration_path(@user) %>
+
+<br>
+<br>
 
 Photos:
 <% @photos.each do |photo| %>
