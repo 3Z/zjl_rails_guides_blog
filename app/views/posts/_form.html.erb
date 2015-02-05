@@ -8,16 +8,16 @@ now is form_for @article do |f|
 doc says that @article is a resource, rails can determine which url to use if the resource match the REST routes,
 actually that means, rails will generate forms with different post urls, like:
 new action:
-<form accept-charset="UTF-8" action="/articles" class="new_article" id="new_article" method="post">
+<form accept-charset="UTF-8" action="/posts" class="new_article" id="new_article" method="post">
 edit action:
-<form accept-charset="UTF-8" action="/articles/5" class="edit_article" id="edit_article_5" method="post">
-according to rake routes, we will know new action will post to articles#create, while edit action will post to articles#update
-(PATCH  /articles/:id(.:format)      articles#update)
+<form accept-charset="UTF-8" action="/posts/5" class="edit_article" id="edit_article_5" method="post">
+according to rake routes, we will know new action will post to posts#create, while edit action will post to posts#update
+(PATCH  /posts/:id(.:format)      posts#update)
 -->
 
-<% @article ||= @user.articles.build %>
+<% @post ||= @user.posts.build %>
 
-<%= form_for ([@user, @article]) do |f| %>
+<%= form_for ([@user, @post]) do |f| %>
 
 	<p>
 		<%= f.label :title %> <br>

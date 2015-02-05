@@ -3,11 +3,11 @@ Rails.application.routes.draw do
   devise_for :users
 
   # resources :users do
-  #   resources :articles
+  #   resources :posts
   #   resources :photos
   # end
   #
-  # resources :articles do
+  # resources :posts do
   #   resources :comments
   # end
 
@@ -24,7 +24,7 @@ Rails.application.routes.draw do
     #   end
     # end
 
-    resources :articles
+    resources :posts
 
     resources :photos
 

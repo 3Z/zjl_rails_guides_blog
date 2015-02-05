@@ -1,10 +1,10 @@
 
-class Admin::ArticlesController < AdminController
-  before_action :load_articles, only: [:index, :show, :edit, :update, :destroy]
+class Admin::PostsController < AdminController
+  before_action :load_posts, only: [:index, :show, :edit, :update, :destroy]
   before_action :load_user
 
   def index
-    # @articles = @articles.page(params[:page])
+    # @posts = @posts.page(params[:page])
   end
 
   def show

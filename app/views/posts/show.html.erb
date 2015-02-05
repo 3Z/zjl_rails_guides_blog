@@ -1,11 +1,11 @@
 <p>
 	<strong>Article Title:</strong>
-	<%= @article.title %>
+	<%= @post.title %>
 </p>
 
 <p>
 	<strong>Article Text:</strong>
-	<%= @article.text %>
+	<%= @post.text %>
 </p>
 
 <h2>Comments</h2>
@@ -14,7 +14,7 @@
     <th><strong>Commenter</strong></th>
     <th><strong>Comment</strong></th>
   </tr>
-  <%= render @article.comments %>
+  <%= render @post.comments %>
 </table>
 
 <h2>Add a comment</h2>

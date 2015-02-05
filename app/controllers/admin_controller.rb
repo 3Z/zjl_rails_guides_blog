@@ -16,8 +16,8 @@ class AdminController < FrontendController
     @user = current_user
   end
 
-  def load_articles
-    @articles = current_user.articles
+  def load_posts
+    @posts = current_user.posts
   end
 
   def load_photos
