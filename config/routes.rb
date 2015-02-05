@@ -24,7 +24,7 @@ Rails.application.routes.draw do
     #   end
     # end
 
-    resources :posts
+    resources :posts, only: [:show, :destroy, :index]
 
     resources :photos
 

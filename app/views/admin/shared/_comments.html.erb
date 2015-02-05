@@ -1,0 +1,17 @@
+<h2>Comments</h2>
+
+<table>
+
+  <tr>
+    <th><h2>Commenter</h2></th>
+    <th><h2>Content</h2></th>
+  </tr>
+
+  <% post.comments.each do |comment| %>
+    <tr>
+      <td><%= comment.commenter %></td>
+      <td><%= comment.body %></td>
+    </tr>
+  <% end %>
+
+</table>

@@ -1,20 +1,13 @@
 <h2>Admin Profile</h2>
-<%= @user.email %>
-<%= link_to "Sign out", destroy_user_session_path %>
 
+<%= @user.email %>
+
+<%= link_to "Sign out", destroy_user_session_path %>
 <br>
 <br>
 
 <%= link_to "Posts", admin_posts_path %>
-
 <br>
 <br>
 
-<h2>Posts</h2>
-<table>
-  <tr>
-    <th><strong>Title</strong></th>
-    <th><strong>Content</strong></th>
-  </tr>
-  <%= render @user.posts %>
-</table>
+<%= render partial: 'admin/shared/posts', locals: { posts: @posts } %>

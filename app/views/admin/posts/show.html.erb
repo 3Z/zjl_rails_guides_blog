@@ -1,0 +1,18 @@
+<p>
+	<strong>Post Title:</strong>
+	<%= @post.title %>
+</p>
+
+<p>
+	<strong>Post Text:</strong>
+	<%= @post.text %>
+</p>
+
+<!--<%#= link_to "Edit this post", edit_admin_post_path %>-->
+<br>
+<br>
+
+<%= render partial: 'admin/shared/comments', locals: { post: @post } %>
+
+<!--<h2>Add a comment</h2>-->
+<!--<%#= render "comments/form" %>-->

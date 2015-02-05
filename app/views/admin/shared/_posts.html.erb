@@ -1,0 +1,19 @@
+<h2>Posts</h2>
+
+<table>
+  <tr>
+    <th><h2>Title</h2></th>
+    <th><h2>Content</h2></th>
+  </tr>
+
+  <% posts.each do |post| %>
+    <tr>
+      <td><%= link_to post.title, admin_post_path(post) %></td>
+      <td><%= post.text %></td>
+      <td><%= link_to "Show", admin_post_path(post) %></td>
+      <!--<td><%#= link_to "Edit", edit_admin_post_path(post) %></td>-->
+      <td><%= link_to 'Destroy', admin_post_path(post), method: :delete %></td>
+    </tr>
+  <% end %>
+
+</table>

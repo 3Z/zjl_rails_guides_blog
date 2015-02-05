@@ -4,6 +4,7 @@ class Admin::HomeController < AdminController
   
   def index
     puts "admin/home#index, params[:page]", params[:page]
+    @posts = @posts.includes(:comments)
   end
 
   def profile
