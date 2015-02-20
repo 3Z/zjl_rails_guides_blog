@@ -33,6 +33,10 @@ Rails.application.routes.draw do
   namespace :frontend, path: '/' do
     root 'home#index'
 
+    resources :users, only: [:show] do
+      resources :posts, only: [:show]
+    end
+
   end
 
 end

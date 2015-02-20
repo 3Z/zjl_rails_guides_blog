@@ -1,0 +1,16 @@
+<h2>Posts</h2>
+
+<table>
+  <tr>
+    <th><h2>Title</h2></th>
+    <th><h2>Content</h2></th>
+  </tr>
+
+  <% posts.each do |post| %>
+    <tr>
+      <td><%= link_to post.title, frontend_user_post_path(@user, post) %></td>
+      <td><%= post.text %></td>
+    </tr>
+  <% end %>
+
+</table>

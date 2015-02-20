@@ -26,7 +26,7 @@ Users:
         <td><%= user.gender %></td>
         <td><%= user.age %></td>
         <td><%= user.email %></td>
-        <td><%= link_to image_tag(user.avatar.url(:thumb)), user_path(user) %></td>
+        <td><%= link_to image_tag(user.avatar.url(:thumb)), frontend_user_path(user) %></td>
       </tr>
   <% end %>
 
