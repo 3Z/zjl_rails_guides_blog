@@ -1,0 +1,7 @@
+<h2>Photos</h2>
+
+<% photos.each do |photo| %>
+    <br>
+    <%= image_tag(photo.image.url(:thumb))%>
+    <br>
+<% end %>

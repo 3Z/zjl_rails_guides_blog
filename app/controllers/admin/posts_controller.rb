@@ -49,12 +49,6 @@ class Admin::PostsController < AdminController
     redirect_to admin_posts_path
   end
 
-  def profile
-  end
-
-  def update_profile
-  end
-
   def post_params
     params.require(:post).permit(:user_id, :title, :text)
   end

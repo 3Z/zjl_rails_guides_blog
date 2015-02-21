@@ -6,8 +6,34 @@
 <br>
 <br>
 
+<%= link_to "Update Profile", edit_user_registration_path(@user) %>
+
+<br>
+<br>
+
+<%= render partial: 'admin/shared/photos', locals: { photos: @photos } %>
+
+<br>
+<br>
+
 <%= link_to "Posts", admin_posts_path %>
 <br>
 <br>
 
 <%= render partial: 'admin/shared/posts', locals: { posts: @posts } %>
+
+<h2>Upload photo</h2>
+
+<% @photo ||= @user.photos.build %>
+<%= form_for [:admin, @photo], :html => { :multipart => true } do |f| %>
+
+    <p>
+      <%= f.label :image %> <br>
+      <%= f.file_field :image %>
+    </p>
+
+    <p>
+      <%= f.submit "Upload" %>
+    </p>
+
+<% end %>
