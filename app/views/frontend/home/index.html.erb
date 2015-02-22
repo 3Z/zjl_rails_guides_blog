@@ -1,9 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+  <%= stylesheet_link_tag 'frontend/home', media: 'all', 'data-turbolinks-track' => true %>
+
+  <%= csrf_meta_tags %>
+</head>
+
+
+
 <% if user_signed_in? %>
     Welcome <%= link_to "#{current_user.email}", admin_root_path %> !
 <% else %>
     <%= link_to "Sign in", new_user_session_path %>
 <% end %>
 
+<br>
+<br>
+
+<div class="commonsearch">
+  <div class="conditions">
+    <p class="fitem">
+      <label class="title">性别：</label><input type="radio" name="sex" id="suform-sex-1" value="1" class="radio" yhclickid="searchuser.changeTagType" yhdata="1" /><label for="suform-sex-1" class="sex">男</label><input type="radio" name="sex" id="suform-sex-0" value="0" class="radio" checked="checked" yhclickid="searchuser.changeTagType" yhdata="0" /><label for="suform-sex-0">女</label>
+    </p>
+    <p class="fitem">
+      <label for="suform-province" class="title">地区：</label><select name="province" id="suform-province" class="province"></select><select name="city" id="suform-city" class="city"></select><select name="district" id="suform-district" class="district"></select>
+    </p>
+    <p class="fitem">
+      <label for="suform-age-begin" class="title">年龄：</label><select name="ageBegin" id="suform-age-begin" class="age"></select><label for="suform-age-end" class="age">-</label><select name="ageEnd" id="suform-age-end" class="age"></select>
+    </p>
+    <p class="fitem">
+      <label for="suform-marriage" class="title">婚姻：</label><select name="marriage" id="suform-marriage" class="marriage"></select>
+    </p>
+    <p class="fitem">
+      <label for="suform-aim" class="title">交友目的：</label><select name="aim" id="suform-aim" class="aim"></select>
+    </p>
+  </div>
+  <div class="btnblock">
+    <button id="commonsearchbtn" type="button" class="button button-major button-s button-w3" onclick="return YH.pages.searchuser.searchUsers();"><span><span>找会员</span></span></button>
+  </div>
+</div>
+
+<br>
+<br>
+
+<!--<div class="g-doc">-->
+    <div class="m-hotPhoto">
+      <div class="title">
+        老乡头像
+      </div>
+
+      <ul class="list f-cb container">
+      <% @users.each do |user| %>
+        <li class="block">
+          <div class="pic">
+            <!--<a target="_blank" href="/photowall/78668.html" title="靳宝:杨琦的相册">-->
+              <!--<img data-echo="http://4.file.8090.com/uploads/2015/01/07/09/201501070948451364.jpg" src="http://0.res.8090.com/images/placeholder.gif" alt="靳宝:杨琦的相册"-->
+                   <!--title="靳宝:杨琦的相册" /></a>-->
+            <%= link_to image_tag(user.avatar.url(:thumb)), frontend_user_path(user) %>
+          </div>
+
+          <div class="name">
+            <a class="f-toe" target="_blank" href="http://localhost:3000/"><%= user.name %></a>
+            <div class="info">
+                <span><a  target="_blank" href="http://localhost:3000/"> 165CM</a></span>
+                <span><a  target="_blank" href="http://localhost:3000/" >23</a>&nbsp/</span>
+                <span><a target="_blank" href="http://localhost:3000/">北京</a>&nbsp/</span>
+            </div>
+          </div>
+
+          <div class="text f-toe"><a target="_blank"  href="http://www.8090.com/modellist/modeltype-24">平面模特</a>，<a target="_blank"  href="http://www.8090.com/modellist/modeltype-21">演员</a>，<a target="_blank"  href="http://www.8090.com/modellist/modeltype-22">主持人</a></div>
+          <div class="msg">
+            <div class="ll" title="浏览">32558</div>
+            <a data-uid="78668" class="gz" title="关注" href="javascript:ModelFunction.AddAttention({receiveuid:'78668'});"></a>
+            <a data-uid="78668" class="ds" title="搭讪" href="javascript:sys.dialog.accost(78668);"></a>
+          </div>
+        </li>
+      <% end %>
+    </ul>
+</div>
+<!--</div>-->
+
+<br>
+<br>
+<br>
+<br>
 <br>
 <br>
 

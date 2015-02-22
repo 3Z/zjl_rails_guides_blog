@@ -1,0 +1,113 @@
+.g-doc{width:100%;min-width:1250px;min-height:100%;background: url(image-path('2015_guonian_1.jpg')) repeat;}
+
+body {background: url(image-path('2015_guonian_1.jpg')) repeat;}
+
+#page-searchuser .pagectrl{margin:20px}
+
+#page-searchuser .searchformwrap .commonsearch .conditions{overflow:hidden;-zoom:1;display:inline;float:left;height:25px}
+
+#page-searchuser .searchformwrap .commonsearch .conditions .fitem{display:inline;float:left;padding:2px 1em 4px 0}
+
+
+.m-hotPhoto{position: relative;z-index: 1;float:left;width:100%;margin: 20px 0 -20px;}
+.m-hotPhoto .title{position:relative;height:74px;line-height: 74px;font-size: 24px;color: #000;}
+.m-hotPhoto .nav{position: absolute;bottom:25px;right: 0;width: 100%;text-align: right;line-height: 14px;font-size: 12px;}
+.m-hotPhoto .nav a{margin-left:8px;color:#000;}
+.m-hotPhoto .nav a:hover,
+.m-hotPhoto .nav .more{color:#e74e3d;}
+.m-hotPhoto .list{width: 1220px;}
+.m-hotPhoto .list li{float: left;width: 224px;margin: 0 20px 20px 0;background-color: #fff;overflow: hidden;
+  -webkit-transition: .3s;
+  -moz-transition: .3s;
+  transition: .3s;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+.m-hotPhoto .list li:hover{
+  -webkit-box-shadow: 0 0 10px rgba(0,0,0,.2);
+  -moz-box-shadow: 0 0 10px rgba(0,0,0,.2);
+  box-shadow: 0 0 10px rgba(0,0,0,.2)
+}
+.m-hotPhoto .pic{position: relative;width: 100%;height: 270px;background: url('../images/ajax_03.gif') no-repeat center #fff;overflow: hidden;}
+.m-hotPhoto .pic img{width: 224px;}
+.m-hotPhoto .floor{position: absolute;top: 0;left: 0;z-index: 3;width: 100%;height: 100%;background-color: rgba(255,255,255,.4);visibility: hidden;opacity: 0;
+  -webkit-transition: .3s;
+  -moz-transition: .3s;
+  transition: .3s;
+}
+.m-hotPhoto .pic .floor{position: absolute;top: 0;left: 0;z-index: 3;width: 100%;height: 100%;background-color: rgba(255,255,255,.4);visibility: hidden;opacity: 0;
+  -webkit-transition: .3s;
+  -moz-transition: .3s;
+  transition: .3s;
+}
+.m-hotPhoto .list .name{position: relative;height: 36px;padding: 0 12px;line-height: 36px;font-size: 14px;font-weight: 700;color: #4a4a4a;}
+.m-hotPhoto .list .text{height: 40px;margin-top: -5px;padding: 0 12px;line-height: 40px;font-size: 12px;color: #4a4a4a;}
+.m-hotPhoto .list .info{position: absolute;right: 12px;top: 0;font-size: 12px;font-weight: 400;}
+.m-hotPhoto .list .msg{position: relative;height:35px;text-align: left;line-height: 34px;border-top: 1px solid #ebebeb;}
+.m-hotPhoto .list .msg *{position: absolute;display: block;background: url('../images/icon/ico_02.png') no-repeat;}
+.m-hotPhoto .list .msg .ll{left: 11px;top: 0;padding-left: 30px;font-size: 12px;font-family: 'arial';color: #9a9a9a;background-position: 0 8px;}
+.m-hotPhoto .list .msg .ds{top: 8px;right: 14px;width: 27px;height: 20px;background-position: 0 -136px;}
+.m-hotPhoto .list .msg .gz{top: 7px;right: 57px;width: 23px;height: 21px;background-position: 0 -62px;}
+.m-hotPhoto .list .msg .ll:hover{color: #e74e3d;background-position: 0 -27px;}
+.m-hotPhoto .list .msg .ds:hover{background-position: 0 -174px;}
+.m-hotPhoto .list .msg .gz:hover{background-position: 0 -97px;}
+.m-hotPhoto .list li:hover .floor{visibility: visible;opacity: 1;}
+
+.m-hotPhoto .container{position:relative;z-index:1;width: 1220px;}
+.m-hotPhoto .container .block{float: left;width: 224px;margin: 0 20px 20px 0;background-color: #fff;overflow: hidden;
+  -webkit-transition: .3s;
+  -moz-transition: .3s;
+  transition: .3s;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+.m-hotPhoto .container .block a{ color: #4a4a4a;}
+.m-hotPhoto .container .block a:hover{ color: #e74e3d; text-decoration: underline;}
+.m-hotPhoto .container .pic{position: relative;width: 100%;background: url('../images/ajax_03.gif') no-repeat center #fff;overflow: hidden;}
+.m-hotPhoto .container .pic  img{width: 224px;}
+.m-hotPhoto .container .floor{position: absolute;top: 0;left: 0;z-index: 3;width: 100%;height: 100%;background-color: rgba(255,255,255,.4);visibility: hidden;opacity: 0;
+  -webkit-transition: .3s;
+  -moz-transition: .3s;
+  transition: .3s;
+}
+.m-hotPhoto .container .button{position: absolute;bottom: 18px;left: 120px;display: block;width: 45px;height: 25px;text-align: center;line-height: 25px;font-size: 12px;color: #fff;background-color: rgba(0,0,0,.4);
+  -webkit-border-radius: 13px;
+  -moz-border-radius: 13px;
+  border-radius: 13px;
+}
+.m-hotPhoto .container .button:first-child{left: 60px;}
+.m-hotPhoto .container .name{position: relative;height: 36px;padding: 0 12px;line-height: 36px;font-size: 14px;font-weight: 700;color: #4a4a4a;}
+.m-hotPhoto .container .name > a{ display: inline-block;*display: inline;*zoom:1; max-width:55px;}
+.m-hotPhoto .container .text{margin-top: -5px;padding: 0 12px;line-height: 40px;font-size: 12px;color: #4a4a4a;}
+.m-hotPhoto .container .info{position: absolute;right: 12px;top: 0;font-size: 12px;font-weight: 400;}
+.m-hotPhoto .container .info .msg{float: right;}
+.m-hotPhoto .container .info span{float: right;margin-right: 5px;max-width: 45px;overflow:hidden;word-wrap:normal;white-space:nowrap;text-overflow:ellipsis;}
+.m-hotPhoto .container .msg{position: relative;height:35px;text-align: left;line-height: 34px;border-top: 1px solid #ebebeb;}
+.m-hotPhoto .container .msg *{position: absolute;display: block;background: url('../images/icon/ico_02.png') no-repeat;}
+.m-hotPhoto .container .msg .ll{left: 11px;top: 0;padding-left: 30px;font-size: 12px;font-family: 'arial';color: #9a9a9a;background-position: 0 8px;}
+.m-hotPhoto .container .msg .ds{top: 8px;right: 14px;width: 27px;height: 20px;background-position: 0 -136px;}
+.m-hotPhoto .container .msg .gz{top: 7px;right: 57px;width: 23px;height: 21px;background-position: 0 -62px;}
+.m-hotPhoto .container .msg .ll:hover{color: #e74e3d;background-position: 0 -27px;}
+.m-hotPhoto .container .msg .ds:hover{background-position: 0 -174px;}
+.m-hotPhoto .container .msg .gz:hover{background-position: 0 -97px;}
+.m-hotPhoto .container .block:hover{
+  -webkit-box-shadow: 0 0 10px rgba(0,0,0,.2);
+  -moz-box-shadow:0 0 10px rgba(0,0,0,.2);
+  box-shadow: 0 0 10px rgba(0,0,0,.2)
+}
+.m-hotPhoto .container .block:hover .floor{visibility: visible;opacity: 1;}
+.m-hotPhoto .container .block.fx-fadeIn{
+  -webkit-animation:pulseFadeIn .3s;
+  -moz-animation:pulseFadeIn .3s;
+  animation:pulseFadeIn .3s;
+}
+
+.zjl {
+  border:2px solid #a1a1a1;
+  padding:10px 40px;
+  background:#dddddd;
+  width:300px;
+  border-radius:25px;
+}
